@@ -461,7 +461,72 @@ Weight: 3~
 @10172 = ~Horseshoe Amulet~
 
 @10180 = ~Nine Lives~
-@10181 = ~Nine Lives description placeholder~
+@10181 = ~Armor of this style was once common among the more militant worshippers of Sharess, a goddess whose followers prefer the pleasures of festhalls to honor their feline lady rather than kneel in a temple. In 1311 DR, a sect known as the Velvet Claw adopted the stark white studded leather, its color symbolizing the purity of joy and the confidence of a predator without need of camouflage. The sect served as both protectors of their festhalls and escorts for wealthy patrons traveling between city-states, earning a reputation for their grace and the uncanny habit of landing on their feet, no matter the fall.
+
+Over time the armor fell out of use and remaining sets were quickly found in pawnshops, likely to pay off the substantial debts that a Sharess-worshiper is likely to accrue. Those who possess the armor today are unlikely to ever rid themselves of it due to the life-saving enchantments, leading the sets to become highly valued across the Realms.
+
+STATISTICS:
+
+Equipped abilities:
+– If the wearer is rendered helpless (e.g. by a Hold Person spell), <PRO_HESHE> becomes invisible for 1 turn
+– The armor grants the wearer three chances to cheat death: if the wearer's hit points drop to 10% of maximum or lower, they cannot die from any source and are fully healed as per Heal. This consumes 1 charge. When all charges are exhausted, this effect—and the armor's immunity to death effects—are lost
+
+Armor Class: 4 (1 vs. piercing and missile, 2 vs. slashing)
+Requires:
+ 6 Strength
+
+Weight: 6~
+
+@10182 = ~Armor of this style was once common among the more militant worshippers of Sharess, a goddess whose followers prefer the pleasures of festhalls to honor their feline lady rather than kneel in a temple. In 1311 DR, a sect known as the Velvet Claw adopted the stark white studded leather, its color symbolizing the purity of joy and the confidence of a predator without need of camouflage. The sect served as both protectors of their festhalls and escorts for wealthy patrons traveling between city-states, earning a reputation for their grace and the uncanny habit of landing on their feet, no matter the fall.
+
+Over time the armor fell out of use and remaining sets were quickly found in pawnshops, likely to pay off the substantial debts that a Sharess-worshiper is likely to accrue. Those who possess the armor today are unlikely to ever rid themselves of it due to the life-saving enchantments, leading the sets to become highly valued across the Realms.
+
+STATISTICS:
+
+Equipped abilities:
+– If the wearer is rendered helpless (e.g. by a Hold Person spell), <PRO_HESHE> becomes invisible for 1 turn
+– The armor grants the wearer two chances to cheat death: if the wearer's hit points drop to 10% of maximum or lower, they cannot die from any source and are fully healed as per Heal. This consumes 1 charge. When all charges are exhausted, this effect—and the armor's immunity to death effects—are lost
+
+Armor Class: 4 (1 vs. piercing and missile, 2 vs. slashing)
+Requires:
+ 6 Strength
+
+Weight: 6~
+
+@10183 = ~Armor of this style was once common among the more militant worshippers of Sharess, a goddess whose followers prefer the pleasures of festhalls to honor their feline lady rather than kneel in a temple. In 1311 DR, a sect known as the Velvet Claw adopted the stark white studded leather, its color symbolizing the purity of joy and the confidence of a predator without need of camouflage. The sect served as both protectors of their festhalls and escorts for wealthy patrons traveling between city-states, earning a reputation for their grace and the uncanny habit of landing on their feet, no matter the fall.
+
+Over time the armor fell out of use and remaining sets were quickly found in pawnshops, likely to pay off the substantial debts that a Sharess-worshiper is likely to accrue. Those who possess the armor today are unlikely to ever rid themselves of it due to the life-saving enchantments, leading the sets to become highly valued across the Realms.
+
+STATISTICS:
+
+Equipped abilities:
+– If the wearer is rendered helpless (e.g. by a Hold Person spell), <PRO_HESHE> becomes invisible for 1 turn
+– The armor grants the wearer one chance to cheat death: if the wearer's hit points drop to 10% of maximum or lower, they cannot die from any source and are fully healed as per Heal. When this is triggered, this effect—and the armor's immunity to death effects—are lost
+
+Armor Class: 4 (1 vs. piercing and missile, 2 vs. slashing)
+Requires:
+ 6 Strength
+
+Weight: 6~
+
+@10184 = ~Armor of this style was once common among the more militant worshippers of Sharess, a goddess whose followers prefer the pleasures of festhalls to honor their feline lady rather than kneel in a temple. In 1311 DR, a sect known as the Velvet Claw adopted the stark white studded leather, its color symbolizing the purity of joy and the confidence of a predator without need of camouflage. The sect served as both protectors of their festhalls and escorts for wealthy patrons traveling between city-states, earning a reputation for their grace and the uncanny habit of landing on their feet, no matter the fall.
+
+Over time the armor fell out of use and remaining sets were quickly found in pawnshops, likely to pay off the substantial debts that a Sharess-worshiper is likely to accrue. Those who possess the armor today are unlikely to ever rid themselves of it due to the life-saving enchantments, leading the sets to become highly valued across the Realms.
+
+STATISTICS:
+
+Equipped abilities:
+– If the wearer is rendered helpless (e.g. by a Hold Person spell), <PRO_HESHE> becomes invisible for 1 turn
+– Saving throws: +1
+
+Armor Class: 3 (0 vs. piercing and missile, 1 vs. slashing)
+Requires:
+ 6 Strength
+
+Weight: 6~
+
+@10185 = ~Nine Lives charge consumed~
+@10186 = ~Nine Lives charges depleted~
 
 @10190 = ~Jack Of All Trades~
 @10191 = ~Both the creator and previous owners of this peculiar cloak, much like the garment itself, have been largely lost to history. Whether ‘Jack’ was once its wearer or simply a namesake is unclear, but whoever they were, the cloak has long outlasted them.

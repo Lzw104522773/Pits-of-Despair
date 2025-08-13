@@ -268,9 +268,26 @@ COPY ~%MOD_FOLDER%/items/angelichorseshoe/zbahorse.itm~ ~override~
 
 //////// Nine Lives -- Nephy's Armor \\\\\\\\
 COPY ~%MOD_FOLDER%/items/nephy_9_lives~ ~override~
-COPY_EXISTING ~zbneparm.itm~ ~override~
+COPY_EXISTING ~zbnepar0.itm~ ~override~
     SAY NAME2 @10180
     SAY IDENTIFIED_DESC @10181
+COPY_EXISTING ~zbnepar1.itm~ ~override~
+    SAY NAME2 @10180
+    SAY IDENTIFIED_DESC @10182
+COPY_EXISTING ~zbnepar2.itm~ ~override~
+    SAY NAME2 @10180
+    SAY IDENTIFIED_DESC @10183
+COPY_EXISTING ~zbnepar3.itm~ ~override~
+    SAY NAME2 @10180
+    SAY IDENTIFIED_DESC @10184
+
+
+COPY_EXISTING ~zb9live1.spl~ ~override~
+              ~zb9live2.spl~ ~override~
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@10185) END
+
+COPY_EXISTING ~zb9live3.spl~ ~override~
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@10186) END
 
 //////// Jack of all trades \\\\\\\\
 COPY ~%MOD_FOLDER%/items/jack~ ~override~

@@ -1,5 +1,5 @@
 IF
-  Global("ZBCUT02SKIP_CUTSCENE_BREAKABLE","GLOBAL",1)
+		Global("ZBCUT02SKIP_CUTSCENE_BREAKABLE","GLOBAL",1)
 THEN
   RESPONSE #100
     SetCutSceneBreakable(FALSE)
@@ -24,13 +24,15 @@ THEN
 		ActionOverride("ohbjoker",Spell(Myself,WIZARD_PROTECTION_FROM_FIRE))  // SPWI319.SPL (Protection From Fire)
 		ActionOverride("ohbwing",DestroySelf())
 		SmallWait(2)
-		CreateCreature("ohbwing",[940.700],NW)  // The Winged
+		CreateCreature("ohbwing",[360.680],NE)  // The Winged
 		ActionOverride("ohbwing",ChangeAIScript("ohbwings",OVERRIDE))
 		ActionOverride("ohbwing",ChangeAIScript("",GENERAL))
 		ActionOverride("ohbdorma",ReallyForceSpell(Myself,WIZARD_FIRE_SHIELD_RED))  // SPWI418.SPL (Fire Shield (Red))
-		ActionOverride("ohbwing",JumpToPoint([1000.735]))
-		ActionOverride("ohbwing",Face(NW))
 		SmallWait(1)
+		ActionOverride("zbmnob1",DestroySelf())
+		ActionOverride("zbfnob1",DestroySelf())
+		ActionOverride("zbmpea1",DestroySelf())
 		FadeFromColor([10.0],0)
+		SetGlobal("OHB_BP2_CAPTURE","GLOBAL",3)
 		ActionOverride("ohbnajim",StartDialogueNoSet(Player1))
 END

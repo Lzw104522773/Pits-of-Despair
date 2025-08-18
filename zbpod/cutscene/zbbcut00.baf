@@ -4,7 +4,6 @@ THEN
 	RESPONSE #100
 		CutSceneId(Player1)
 		SetGlobal("OHB_BP2_CAPTURE","GLOBAL",1)
-		Explore()
 		ChangeAIScript("OHBPLOT",OVERRIDE)
 		ActionOverride(Player2,ChangeAIScript("OHBPLOT",OVERRIDE))
 		ActionOverride(Player3,ChangeAIScript("OHBPLOT",OVERRIDE))
@@ -17,23 +16,27 @@ THEN
 		ApplySpellRES("SPBP001",Player4)  // No such index
 		ApplySpellRES("SPBP001",Player5)  // No such index
 		ApplySpellRES("SPBP001",Player6)  // No such index
-		//ReallyForceSpell(Player1,LOSE_ALL)  SPIN838.SPL (Loses all Bhaal powers)
-		CreateCreature("ohbbarte",[489.405],SE)  // Bartender
+		CreateCreature("cutspy",[340.660],NE)
 		CreateCreature("ohbjoker",[585.473],SE)  // Joker
 		ActionOverride("ohbjoker",Polymorph(NOBLE_WOMAN))
 		ActionOverride("ohbjoker",SetName(1083))  // Bard
-		CreateCreature("ohbdorma",[786.391],SW)  // Dormamus
+		CreateCreature("ohbdorma",[505.390],SE)  // Dormamus
 		ActionOverride("ohbdorma",Polymorph(STATIC_PEASANT_MAN_CHAIR))
 		ActionOverride("ohbdorma",SetName(93613))  // Fan
-		CreateCreature("ohbbanno",[498.577],E)  // Bannor
+		ActionOverride("ohbdorma",FaceObject("ohbjoker"))
+		CreateCreature("ohbbanno",[880.560],E)  // Bannor
 		ActionOverride("ohbbanno",Polymorph(PEASANT_MAN))
 		ActionOverride("ohbbanno",SetName(93613))  // Fan
-		CreateCreature("ohbthass",[753.665],NW)  // Thassk Kun
+		ActionOverride("ohbbanno",FaceObject("ohbjoker"))
+		CreateCreature("ohbthass",[560.600],N)  // Thassk Kun
 		ActionOverride("ohbthass",Polymorph(STATIC_PEASANT_MAN_CHAIR))
 		ActionOverride("ohbthass",SetName(93613))  // Fan
-		CreateCreature("ohbpol",[882.557],W)  // Pol Pyrrus
+		ActionOverride("ohbthass",FaceObject("ohbjoker"))
+		CreateCreature("ohbpol",[725.620],NW)  // Pol Pyrrus
 		ActionOverride("ohbpol",Polymorph(STATIC_PEASANT_MAN_CHAIR))
 		ActionOverride("ohbpol",SetName(93613))  // Fan
+		ActionOverride("ohbpol",FaceObject("ohbjoker"))
+		SmallWait(25)
 		JumpToPoint([697.458])
 		ActionOverride(Player2,JumpToPoint([766.482]))
 		ActionOverride(Player3,JumpToPoint([592.533]))
@@ -49,13 +52,13 @@ THEN
 		MoveViewPoint([672.468],INSTANT)
 		SetGlobal("ZBCUT00SKIP_CUTSCENE_BREAKABLE","GLOBAL",1)
 		SetAreaScript("zbcut00s",OVERRIDE)
-		SetGlobal("ZBBP2inBG2","GLOBAL",1) /* newly added line, to check that we're playing Pits of Despair during dialogue, interjections, etc */
-		SetGlobal("OHB_TALKED_BELLOWGULP","GLOBAL",1) /* take a sledgehammer to Bello's intro dialogue, skipping straight to his main merchant dialogue */
+		SetGlobal("ZBBP2inBG2","GLOBAL",1)
+		SetGlobal("OHB_TALKED_BELLOWGULP","GLOBAL",1)
 		SmallWait(1)
 		SetCutSceneBreakable(TRUE)
 		FadeFromColor([60.0],0)
 		DisplayStringHead("ohbjoker",@2)  // Along the Sword Coast they traveled, battling all kinds of horrible creatures. Investigating matters of tainted iron and politics, only to discover their own Bhaalspawn blood behind it. Baldur’s Gate held its breath as a battle of godly heritage unraveled beneath the ground. But they rose to the challenge, ending the crisis, and became heroes to the city.
-		SmallWait(7)
+		Wait(7)
 		DisplayStringHead("OHBTHASS",@7)  // A decent yarn, though a bit TOO fantastic if you ask me.
 		Wait(5)
 		DisplayStringHead("OHBJOKER",@8)  // Thank you. It is an amazing tale, all the more so for the fact that it actually happened.

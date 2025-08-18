@@ -70,10 +70,11 @@ ADD_JOURNAL TITLE (@800000) @800001 USING ~%MOD_FOLDER%/lang/english/JournalEntr
 
 // Dialogs
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dlg/ohbbello.d~
-                        ~%MOD_FOLDER%/dlg/ohbdenna.d~ /* still needs HEAVY edits */
+                        ~%MOD_FOLDER%/dlg/ohbdenna.d~
                         ~%MOD_FOLDER%/dlg/ohbjoker.d~
                         ~%MOD_FOLDER%/dlg/ohbnajim.d~
-                        ~%MOD_FOLDER%/dlg/ohbbrodl.d~ /* still needs HEAVY edits */
+                        ~%MOD_FOLDER%/dlg/ohbdorma.d~
+                        ~%MOD_FOLDER%/dlg/ohbbrodl.d~
                         ~%MOD_FOLDER%/dlg/ohbstann.d~
                         ~%MOD_FOLDER%/dlg/ohbcook.d~
                         ~%MOD_FOLDER%/dlg/ohbcurel.d~
@@ -83,7 +84,7 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dlg/ohbbello.d~
                         ~%MOD_FOLDER%/dlg/ohbgc01.d~
                         ~%MOD_FOLDER%/dlg/ohbgerro.d~
                         ~%MOD_FOLDER%/dlg/ohbgezzt.d~
-                        ~%MOD_FOLDER%/dlg/ohbimim.d~ /* needs crossmod edits for BPinBG1 */
+                        ~%MOD_FOLDER%/dlg/ohbimim.d~
                         ~%MOD_FOLDER%/dlg/ohblaris.d~
                         ~%MOD_FOLDER%/dlg/ohbleoka.d~
                         ~%MOD_FOLDER%/dlg/ohbmardu.d~
@@ -91,6 +92,7 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dlg/ohbbello.d~
                         ~%MOD_FOLDER%/dlg/ohbstirv.d~
                         ~%MOD_FOLDER%/dlg/ohbtartl.d~
                         ~%MOD_FOLDER%/dlg/gaelan.d~
+                        ~%MOD_FOLDER%/dlg/ohbpol.d~
                         ~%MOD_FOLDER%/dlg/zbeshpeu.d~
                         ~%MOD_FOLDER%/dlg/zbvci.d~
                         ~%MOD_FOLDER%/dlg/zbvyan.d~

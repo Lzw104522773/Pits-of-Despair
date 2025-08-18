@@ -72,6 +72,9 @@ THEN
 		DisplayStringHead("zbmnob1", @50) /* What the hells?! */ 
 		SmallWait(10)
 		DisplayStringHead("zbmpea1", @51) /* Run for it! */
+		ActionOverride("ohbbanno",MoveToObjectNoInterrupt("zbmnob1"))
+		ActionOverride("ohbbanno",Attack("zbmnob1"))
+		SmallWait(5)
 		ActionOverride("zbbarte", MoveToPointNoInterrupt([935.305]))
 		ActionOverride("zbfnob1",MoveToPointNoInterrupt([232.735]))
 		ActionOverride("zbmpea1",MoveToPointNoInterrupt([232.735]))
@@ -80,11 +83,8 @@ THEN
 		SmallWait(5)
 		OpenDoor("Door1")
 		SmallWait(25)
-		ActionOverride("ohbbanno",MoveToObjectNoInterrupt("zbmnob1"))
-		SmallWait(25)
 		CloseDoor("Door1")
 		SmallWait(5)
-		ActionOverride("ohbbanno",Attack("zbmnob1"))
 		Wait(2)
 		SetCutSceneBreakable(FALSE)
 		SetGlobal("BD_CUTSCENE_BREAKABLE","GLOBAL",0)

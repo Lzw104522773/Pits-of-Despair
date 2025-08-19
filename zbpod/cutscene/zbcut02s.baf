@@ -34,5 +34,6 @@ THEN
 		ActionOverride("zbmpea1",DestroySelf())
 		FadeFromColor([10.0],0)
 		SetGlobal("OHB_BP2_CAPTURE","GLOBAL",3)
+		SetAreaScript("",OVERRIDE)
 		ActionOverride("ohbnajim",StartDialogueNoSet(Player1))
 END

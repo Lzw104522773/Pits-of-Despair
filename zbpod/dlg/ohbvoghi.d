@@ -1,49 +1,37 @@
-// creator  : weidu (version 24900)
-// argument : OHBVOGHI.DLG
-// game     : ..
-// source   : ../DATA/BLACKPITS.BIF
-// dialog   : ..\lang\en_us\dialog.tlk
-// dialogF  : (none)
-
 BEGIN ~OHBVOGHI~
 
-IF ~  Global("OHB_TALKED_VOGHI","LOCALS",0)
-Global("ohb_finale","global",0)
-~ THEN BEGIN 0
+IF ~Global("OHB_TALKED_VOGHI","LOCALS",0) Global("ohb_finale","global",0)~ THEN BEGIN 0
   SAY @3472 /* Augh, mine head! By the Oak Father's leafy arse, I've never met a woman who could drink like that! One minute I'm singing with an ale in one hand and a wench in the other, and then I wake up here... Where in the Nine Hells am I? */
-  IF ~~ THEN REPLY @3473 /* I was hoping you could tell me. */ DO ~SetGlobal("OHB_TALKED_VOGHI","LOCALS",1)
-~ GOTO 2
-  IF ~~ THEN REPLY @3474 /* No clue. I'll ask someone else. */ DO ~SetGlobal("OHB_TALKED_VOGHI","LOCALS",1)
-~ GOTO 1
-  IF ~~ THEN REPLY @3475 /* Your brain hurts? Well, at least it's a small problem. */ DO ~SetGlobal("OHB_TALKED_VOGHI","LOCALS",1)
-~ GOTO 21
+  IF ~~ THEN GOTO ZBVOGINTRO
 END
 
 IF ~~ THEN BEGIN 1
-  SAY @3476 /* Aye. Well, if you find out where the food, ale, and women are, come back and tell Voghiln! */
-  IF ~~ THEN EXIT
+  SAY @3892 /* My heart is filled with relief to see you again, mine friend! The moment we parted ways I had a most terrible <PRO_RACE> Bhaalspawn-shaped hole in mine heart! Alas, I cannot tell you where we are. */
+  IF ~~ THEN GOTO 2
 END
 
 IF ~~ THEN BEGIN 2
   SAY @3477 /* I would if I could, but the guards say nothing to me. I tell you this, though: From where I stand, it is looking like a room of some sort. Has a floor... walls... doors. Ja! We are in a room! */
   IF ~~ THEN REPLY @3478 /* How long have you been here? */ GOTO 3
   IF ~~ THEN REPLY @3479 /* Do you know why we were brought here? */ GOTO 4
-  IF ~~ THEN REPLY @3480 /* My gods, you're right! I'll be leaving it now. */ GOTO 1
+  IF ~~ THEN REPLY @3480 /* My gods, you're right! I'll be leaving it now. */ GOTO ZBVOGEXIT
   IF ~~ THEN REPLY @3481 /* It would appear intelligence is not a prerequisite for being held here. */ GOTO 21
 END
 
 IF ~~ THEN BEGIN 3
   SAY @3482 /* A couple of hours, maybe. Long enough to be getting hungry, I'll tell you this. */
-  IF ~~ THEN REPLY @3483 /* Very well, thank you for your time. */ GOTO 1
-  IF ~~ THEN REPLY @3484 /* You can get hungry? I find that hard to believe. Well, I must be going. */ GOTO 1
-  IF ~~ THEN REPLY @3485 /* For you, that would take, what, five minutes? */ GOTO 21
+  IF ~~ THEN REPLY @3893 /* Very well. I’ll go and investigate this place. */ GOTO ZBVOGEXIT
+  IF ~~ THEN REPLY @3894 /* Could you come with me, Voghiln? It would be good to travel with you once more. */ GOTO ZBVOGLETDOWN
+  IF ~~ THEN REPLY @3895 /* Perhaps you could join my party. You seem capable enough. */ GOTO ZBVOGLETDOWN
+  IF ~~ THEN REPLY @3896 /* Well, I’m going to go and find someone worth talking to now. */  GOTO ZBVOGEXIT
 END
 
 IF ~~ THEN BEGIN 4
-  SAY @3486 /* I do not know why we were brought here. I am thinking I was snatched for my fame in fighting, drinking, and my way with the ladies. */
-  IF ~~ THEN REPLY @3487 /* Thank you for your time. I must go now. */ GOTO 1
-  IF ~~ THEN REPLY @3484 /* You can get hungry? I find that hard to believe. Well, I must be going. */ GOTO 1
-  IF ~~ THEN REPLY @3488 /* Are you sure you weren't brought here for your finely honed, razor-sharp wit? */ GOTO 21
+  SAY @3897 /* I do not know why we were brought here. I am thinking I was snatched for my fame in fighting, drinking, and my way with the ladies. I can think of a hundred different reasons why you would be captured. Eh… no offence. */
+  IF ~~ THEN REPLY @3893 /* Very well. I’ll go and investigate this place. */ GOTO ZBVOGEXIT
+  IF ~~ THEN REPLY @3894 /* Could you come with me, Voghiln? It would be good to travel with you once more. */ GOTO ZBVOGLETDOWN
+  IF ~~ THEN REPLY @3895 /* Perhaps you could join my party. You seem capable enough. */ GOTO ZBVOGLETDOWN
+  IF ~~ THEN REPLY @3896 /* Well, I’m going to go and find someone worth talking to now. */  GOTO ZBVOGEXIT
 END
 
 IF ~  Global("OHB_FOOD_FIGHT","MYAREA",0)
@@ -197,7 +185,7 @@ IF ~~ THEN BEGIN 21
 END
 
 IF ~~ THEN BEGIN 22
-  SAY @3544 /* Keep on joking... */
+  SAY @3898 /* Keep on joking. Perhaps I will get through to you another time, ja? */
   IF ~~ THEN EXIT
 END
 
@@ -643,4 +631,37 @@ END
 IF ~~ THEN BEGIN 69
   SAY @3666 /* I conquered the Nightmares! An entire clan of orcs wiped out in an afternoon! */
   IF ~~ THEN EXTERN ~OHBHORT~ 49
+END
+
+IF ~~ THEN BEGIN ZBVOGINTRO
+  SAY @3887 /* Wait just a moment, I must still be drunk, or sleeping. Or both! You look… so familiar… */
+  IF ~~ THEN REPLY @3888 /* Voghiln? What are you doing here? Where IS here? */ DO ~SetGlobal("OHB_TALKED_VOGHI","LOCALS",1)~ GOTO 1
+  IF ~~ THEN REPLY @3889 /* Oh, great. It’s you. */ DO ~SetGlobal("OHB_TALKED_VOGHI","LOCALS",1)~ GOTO ZBVOGRELIEVED
+  IF ~~ THEN REPLY @3890 /* Who the hells are you? */ DO ~SetGlobal("OHB_TALKED_VOGHI","LOCALS",1)~ GOTO ZBVOGMISTAKEN
+  IF ~~ THEN REPLY @3891 /* Get out of my way, I don’t have time for imbeciles. */ DO ~SetGlobal("OHB_TALKED_VOGHI","LOCALS",1)~ GOTO 22
+END
+
+IF ~~ THEN BEGIN ZBVOGEXIT
+  SAY @3899 /* Aye. Well, if you find out where the food, ale, and women are, <CHARNAME>, come back and tell Voghiln!  */
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN ZBVOGRELIEVED
+  SAY @3900 /* I see it is I who is more relieved to see you than you me. Thankfully, a skald’s heart is not so easily broken! In spite of this, I cannot tell you where we are. */
+  IF ~~ THEN GOTO 2
+END
+
+IF ~~ THEN BEGIN ZBVOGMISTAKEN
+  SAY @3901 /* Perhaps I was mistaken, but I most certainly recognize you! Any skald worthy of his beard in these parts knows the tales of <CHARNAME> of Baldur’s Gate—though… I can’t tell you what these parts actually are. */
+  IF ~~ THEN GOTO 2
+END
+
+IF ~~ THEN BEGIN ZBVOGLETDOWN
+  SAY @3902 /* Mine friend, if you looked into my eyes right now you would see temptation swimming around like so many skipjack tuna. I do not like to disappoint you, but all I wish to do right now is find a place to sit and drink. */
+  IF ~~ THEN GOTO ZBVOGGOODEXIT
+END
+
+IF ~~ THEN BEGIN ZBVOGGOODEXIT
+  SAY @3903 /* If it comes to a fight, though, you can rely on Voghiln! Now, I am going to go on a grand quest… to find a kitchen. */
+  IF ~~ THEN EXIT
 END

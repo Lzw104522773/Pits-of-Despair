@@ -54,7 +54,7 @@ THEN
 		SmallWait(1)
 		ActionOverride("ohbdorma",SetSequence(SEQ_CAST))
 		ActionOverride("ohbdorma",ReallyForceSpell(Myself,WIZARD_FIRE_SHIELD_RED))  // SPWI418.SPL (Fire Shield (Red))
-		SmallWait(1)
+		SmallWait(25)
 		ActionOverride("ohbwing",MoveToPoint([480.620]))
 		SmallWait(25)
 		ActionOverride("ohbwing",SetSequence(SEQ_CAST))

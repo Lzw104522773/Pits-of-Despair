@@ -10,7 +10,7 @@ THEN
 END
 
 IF
-	Global("ohb_bp2_capture","global",4)
+	Global("OHB_BP2_CAPTURE","GLOBAL",4)
 	Global("ohb_suzail_players_lost","zb2010",0)  // TBP2 - Suzail Tavern
 	Global("ohb_suzail_player1_lost","zb2010",1)  // TBP2 - Suzail Tavern
 	Global("ohb_suzail_player2_lost","zb2010",1)  // TBP2 - Suzail Tavern
@@ -24,7 +24,7 @@ THEN
 END
 
 IF
-	Global("ohb_bp2_capture","global",4)
+	Global("OHB_BP2_CAPTURE","GLOBAL",4)
 	Global("ohb_suzail_hunters_lost","zb2010",0)  // TBP2 - Suzail Tavern
 	Global("ohb_suzail_pol_lost","zb2010",1)  // TBP2 - Suzail Tavern
 	Global("ohb_suzail_thass_lost","zb2010",1)  // TBP2 - Suzail Tavern
@@ -37,7 +37,7 @@ THEN
 END
 
 IF
-	Global("ohb_bp2_capture","global",4)
+	Global("OHB_BP2_CAPTURE","GLOBAL",4)
 	Global("ohb_suzail_players_lost","zb2010",0)  // TBP2 - Suzail Tavern
 	!Dead("ohbnajim")  // Najim
 	Global("ohb_suzail_hunters_lost","zb2010",1)  // TBP2 - Suzail Tavern
@@ -46,7 +46,7 @@ THEN
 	RESPONSE #100
 		SetCursorState(TRUE)
 		ClearAllActions()
-		SetGlobal("ohb_bp2_capture","global",5)
+		SetGlobal("OHB_BP2_CAPTURE","GLOBAL",5)
 		ActionOverride("ohbnajim",SetSequence(SEQ_READY))
 		ActionOverride(Player1,SetSequence(SEQ_READY))
 		ActionOverride(Player2,SetSequence(SEQ_READY))
@@ -57,11 +57,11 @@ THEN
 		CreateCreature("cutspy",[730.560],N)
 		ReallyForceSpellPointRES("ohbsuza2",[1.1])
 		MoveViewObject("ohbnajim",BD_NORMAL)  // Najim
-		SetGlobal("ohb_bp2_capture","global",8)
+		SetGlobal("OHB_BP2_CAPTURE","GLOBAL",8)
 END
 
 IF
-	Global("ohb_bp2_capture","global",4)
+	Global("OHB_BP2_CAPTURE","GLOBAL",4)
 	Global("ohb_suzail_players_lost","zb2010",0)  // TBP2 - Suzail Tavern
 	Dead("ohbnajim")  // Najim
 	Global("ohb_suzail_hunters_lost","zb2010",1)  // TBP2 - Suzail Tavern
@@ -70,7 +70,7 @@ THEN
 	RESPONSE #100
 		SetCursorState(TRUE)
 		ClearAllActions()
-		SetGlobal("ohb_bp2_capture","global",5)
+		SetGlobal("OHB_BP2_CAPTURE","GLOBAL",5)
 		ActionOverride(Player1,SetSequence(SEQ_READY))
 		ActionOverride(Player2,SetSequence(SEQ_READY))
 		ActionOverride(Player3,SetSequence(SEQ_READY))
@@ -83,22 +83,22 @@ THEN
 		Wait(3)
 		CreateVisualEffect("SPPORTAL",[680.355])
 		SmallWait(25)
-		SetGlobal("sprite_is_deadohbnajim","global",0)
+		SetGlobal("sprite_is_deadohbnajim","GLOBAL",0)
 		CreateCreature("ohbnajim",[680.355],S)  // Najim
 		CreateVisualEffect("SPGFLSHI",[680.355])
 		SmallWait(5)
 		PlaySound("ogrem01")
-		SetGlobal("ohb_bp2_capture","global",8)
+		SetGlobal("OHB_BP2_CAPTURE","GLOBAL",8)
 END
 
 IF
-	Global("ohb_bp2_capture","global",4)
+	Global("OHB_BP2_CAPTURE","GLOBAL",4)
 	Global("ohb_suzail_players_lost","zb2010",1)  // TBP2 - Suzail Tavern
 	!Dead("ohbwing")  // The Winged
 THEN
 	RESPONSE #100
 		SetCursorState(TRUE)
-		SetGlobal("ohb_bp2_capture","global",5)
+		SetGlobal("OHB_BP2_CAPTURE","GLOBAL",5)
 		ChangeEnemyAlly("ohbwing",NEUTRAL)  // The Winged
 		ChangeEnemyAlly("ohbpol",NEUTRAL)  // Pol Pyrrus
 		ChangeEnemyAlly("ohbjoker",NEUTRAL)  // Joker
@@ -116,17 +116,17 @@ THEN
 		MoveViewObject("ohbwing",BD_NORMAL)  // The Winged
 		ActionOverride("ohbwing",FaceObject("ohbnajim"))  // Najim
 		ActionOverride("ohbwing",SetSequence(SEQ_HEAD_TURN))
-		SetGlobal("ohb_bp2_capture","global",6)
+		SetGlobal("OHB_BP2_CAPTURE","GLOBAL",6)
 END
 
 IF
-	Global("ohb_bp2_capture","global",4)
+	Global("OHB_BP2_CAPTURE","GLOBAL",4)
 	Global("ohb_suzail_players_lost","zb2010",1)  // TBP2 - Suzail Tavern
 	Dead("ohbwing")  // The Winged
 THEN
 	RESPONSE #100
 		SetCursorState(TRUE)
-		SetGlobal("ohb_bp2_capture","global",5)
+		SetGlobal("OHB_BP2_CAPTURE","GLOBAL",5)
 		ChangeEnemyAlly("ohbwing",NEUTRAL)  // The Winged
 		ChangeEnemyAlly("ohbpol",NEUTRAL)  // Pol Pyrrus
 		ChangeEnemyAlly("ohbjoker",NEUTRAL)  // Joker
@@ -145,7 +145,7 @@ THEN
 		CreateVisualEffect("SPHOLY",[480.620])
 		SmallWait(32)
 		CreateVisualEffect("SPSPEV",[480.620])
-		SetGlobal("sprite_is_deadohbwing","global",0)
+		SetGlobal("sprite_is_deadohbwing","GLOBAL",0)
 		SmallWait(9)
 		CreateCreature("ohbwing",[480.620],NW)  // The Winged
 		ActionOverride("ohbwing",ChangeAIScript("",OVERRIDE))
@@ -158,11 +158,11 @@ THEN
 		Wait(1)
 		ActionOverride("ohbwing",SetSequence(SEQ_READY))
 		Wait(2)
-		SetGlobal("ohb_bp2_capture","global",6)
+		SetGlobal("OHB_BP2_CAPTURE","GLOBAL",6)
 END
 
 IF
-	Global("ohb_bp2_capture","global",6)
+	Global("OHB_BP2_CAPTURE","GLOBAL",6)
 	OR(12)
 		StateCheck(Player1,STATE_REALLY_DEAD)
 		StateCheck(Player2,STATE_REALLY_DEAD)
@@ -179,7 +179,7 @@ IF
 THEN
 	RESPONSE #100
 		SetCursorState(TRUE)
-		SetGlobal("ohb_bp2_capture","global",7)
+		SetGlobal("OHB_BP2_CAPTURE","GLOBAL",7)
 		ClearAllActions()
 		SmallWait(5)
 		DisplayStringHead("ohbwing",90466)  // Bind and ready them for transport. Dennaton will pay us handsomely for these ones.
@@ -197,11 +197,11 @@ THEN
 END
 
 IF
-	Global("ohb_bp2_capture","global",6)
+	Global("OHB_BP2_CAPTURE","GLOBAL",6)
 THEN
 	RESPONSE #100
 		SetCursorState(TRUE)
-		SetGlobal("ohb_bp2_capture","global",7)
+		SetGlobal("OHB_BP2_CAPTURE","GLOBAL",7)
 		ClearAllActions()
 		SmallWait(5)
 		DisplayStringHead("ohbwing",90466)  // Bind and ready them for transport. Dennaton will pay us handsomely for these ones.
@@ -217,7 +217,7 @@ THEN
 END
 
 IF
-	Global("ohb_bp2_capture","global",8)
+	Global("OHB_BP2_CAPTURE","GLOBAL",8)
 	OR(6)
 		StateCheck(Player1,STATE_REALLY_DEAD)
 		StateCheck(Player2,STATE_REALLY_DEAD)
@@ -228,7 +228,7 @@ IF
 THEN
 	RESPONSE #100
 		SetCursorState(TRUE)
-		SetGlobal("ohb_bp2_capture","global",9)
+		SetGlobal("OHB_BP2_CAPTURE","GLOBAL",9)
 		ClearAllActions()
 		Wait(2)
 		ActionOverride("ohbnajim",ForceSpell(Myself,CLERIC_MASS_RAISE_DEAD))  // SPPR729.SPL (Mass Raise Dead)
@@ -239,11 +239,11 @@ THEN
 END
 
 IF
-	Global("ohb_bp2_capture","global",8)
+	Global("OHB_BP2_CAPTURE","GLOBAL",8)
 THEN
 	RESPONSE #100
 		SetCursorState(TRUE)
-		SetGlobal("ohb_bp2_capture","global",9)
+		SetGlobal("OHB_BP2_CAPTURE","GLOBAL",9)
 		ClearAllActions()
 		Wait(2)
 		ActionOverride("ohbnajim",FaceObject(Player1))
@@ -252,7 +252,7 @@ THEN
 END
 
 IF
-	Global("ohb_bp2_capture","global",4)
+	Global("OHB_BP2_CAPTURE","GLOBAL",4)
 	Global("ohb_bartender_ot","zb2010",0)  // TBP2 - Suzail Tavern
 	!GlobalTimerNotExpired("ohb_bartender_ot_timer","zb2010")  // TBP2 - Suzail Tavern
 THEN
@@ -268,7 +268,7 @@ THEN
 END
 
 IF
-	Global("ohb_bp2_capture","global",4)
+	Global("OHB_BP2_CAPTURE","GLOBAL",4)
 	Global("ohb_bartender_ot","zb2010",1)  // TBP2 - Suzail Tavern
 	GlobalTimerExpired("ohb_bartender_ot_timer","zb2010")  // TBP2 - Suzail Tavern
 THEN

@@ -21,10 +21,7 @@ StartCutScene("ohbcut02")
 ~ EXIT
 END
 
-IF ~  Global("OHB_BP2_CAPTURE","GLOBAL",3)
-Global("tier","GLOBAL",0)
-Global("ohb_najim_fight_or_not","ZB2010",0)
-~ THEN BEGIN 3
+IF ~Global("OHB_BP2_CAPTURE","GLOBAL",3) Global("tier","GLOBAL",0) Global("ohb_najim_fight_or_not","ZB2010",0)~ THEN BEGIN 3
   SAY @2161 /* Careful, <CHARNAME>! I suspect the bard's not really a bard! */
   IF ~~ THEN EXTERN ~OHBJOKER~ 26
 END
@@ -180,5 +177,5 @@ IF ~~ THEN BEGIN 21
   SAY @3883 /* The moment has come, <CHARNAME>. Stand with me, and send these blaggards to the afterlife! */
   IF ~~ THEN REPLY @3884 /* Very well! I will not allow myself to be captured again, for any purpose! */ EXTERN ~OHBPOL~ 1
   IF ~~ THEN REPLY @3885 /* I’ll fight for my own skin. I don’t care a whit for you. */ EXTERN ~OHBPOL~ 1
-  IF ~~ THEN REPLY @2184 /* This is not a fight we can win. I surrender… for now. */ DO ~SetGlobal("ohb_bp2_capture","global",6)~ EXIT
+  IF ~~ THEN REPLY @3886 /* This is not a fight we can win. I surrender… for now. */ DO ~SetGlobal("ohb_najim_fight_or_not","ZB2010",3) SetGlobal("OHB_BP2_CAPTURE","GLOBAL",6) SmallWait(5)~ EXIT
 END

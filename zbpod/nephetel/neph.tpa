@@ -9,8 +9,8 @@ COPY ~%MOD_FOLDER%/nephetel/portrait~ ~override~
 COPY ~%MOD_FOLDER%/nephetel/cre/zbneph.cre~ ~override~
   SAY NAME1 @15001
   SAY NAME2 @15001
-  SAY MORALE @195 /* I'm not dying for a lost cause. */
-  SAY HAPPY @196 /* I like this. I feel like dancing. */
+  SAY MORALE @195 /* I'm not dying for a lost cause. [] */
+  SAY HAPPY @196 /* I like this. I feel like dancing. [] */
   SAY UNHAPPY_ANNOYED @197 /* Another shining example of why I keep my expectations low. */
   SAY UNHAPPY_SERIOUS @198 /* If you didn't quite get the hint: pull it together, or I'm gone. */
   SAY UNHAPPY_BREAKING @199 /* That's it. I'm done with you. I'll see you… from the shadows. */

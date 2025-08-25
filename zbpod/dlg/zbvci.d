@@ -15,17 +15,17 @@ END
 
 // Valygar Joker
 INTERJECT_COPY_TRANS OHBJOKER 26 ZBJOKER_VALYGAR
- == VALYGARJ IF ~InParty("Valygar") InMyArea("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ THEN @3872 /* Without your disguises there is nothing to stop us from cutting you down, deceiver. Choose your next words carefully. */
+ == VALYGARJ IF ~InParty("Valygar") InMyArea("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ THEN @3872 /* There is no danger with Minsc and Boo at your side! Take heed, floaty-man, the hamster will protect you! */ /* Without your disguises there is nothing to stop us from cutting you down, deceiver. Choose your next words carefully. */
 END
 
 // Dormamus
 INTERJECT_COPY_TRANS OHBJOKER 26 ZBDORMAMUS_REMARK
-  == EDWINJ IF ~InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @3875 /* What is this pitiful charade? Must we be caught up in every fool’s drama? */
+  == EDWINJ IF ~InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @3875 /* What is this pitiful charade? Must we be caught up in every fool's drama? */ /* What is this pitiful charade? Must we be caught up in every fool’s drama? */
   == AERIEJ IF ~InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @3876 /* They look quite p-powerful, <CHARNAME>. Do we really have a chance against them? */
-  == ANOMENJ IF ~InParty("Anomen") InMyArea("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @3877 /* Lay a hand on me, and you’ll wish you never left whatever hole you crept out from, villains! */
-  == HAERDAJ IF ~InParty("HaerDalis") InMyArea("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN @3878 /* The events of the day continue to become livelier and livelier, don’t they? */
-  == KORGANJ IF ~InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @3879 /* What’re we standing around yapping for? Let’s get to cracking some skulls! */
-  == NEERAJ IF ~InParty("NEERA") InMyArea("NEERA") !StateCheck("NEERA",CD_STATE_NOTVALID)~ THEN @3880 /* Nuh-uh. No way. I’ve had enough mysterious forces trying to capture me for one lifetime, thank you very much. */
+  == ANOMENJ IF ~InParty("Anomen") InMyArea("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @3877 /* Lay a hand on me, and you'll wish you never left whatever hole you crept out from, villains! */ /* Lay a hand on me, and you’ll wish you never left whatever hole you crept out from, villains! */
+  == HAERDAJ IF ~InParty("HaerDalis") InMyArea("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN @3878 /* The events of the day continue to become livelier and livelier, don't they? */ /* The events of the day continue to become livelier and livelier, don’t they? */
+  == KORGANJ IF ~InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @3879 /* What're we standing around yapping for? Let's get to cracking some skulls! */ /* What’re we standing around yapping for? Let’s get to cracking some skulls! */
+  == NEERAJ IF ~InParty("NEERA") InMyArea("NEERA") !StateCheck("NEERA",CD_STATE_NOTVALID)~ THEN @3880 /* Nuh-uh. No way. I've had enough mysterious forces trying to capture me for one lifetime, thank you very much. */ /* Nuh-uh. No way. I’ve had enough mysterious forces trying to capture me for one lifetime, thank you very much. */
 END
 
 CHAIN Player1 ZBPoDIntro2
@@ -141,30 +141,9 @@ END
 
 // Before Training matches
 INTERJECT_COPY_TRANS OHBSTIRV 7 ZBTRAININGPRE1
-  == MINSCJ IF ~InParty("Minsc") InMyArea("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN @3748 /* Boo? What is it, Boo? Boo demands to know why we need to kill defenseless animals for fun? */
-  == JAHEIRAJ IF ~InParty("Minsc") InMyArea("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID) InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ @3749 /* To pour out their black heart into the world, Minsc. Only scum find joy in it. This Stirv deserves no mercy when justice comes. */
-  == MINSCJ IF ~InParty("Minsc") InMyArea("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID) InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @3750 /* Outrage! The butts of evil must be liberally kicked into playing nice with animals. */
-  == JAHEIRAJ IF ~InParty("Minsc") InMyArea("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID) InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ @3751 /* Yes, none shall escape nature's wrath. */
-END
-
-INTERJECT_COPY_TRANS OHBSTIRV 7 ZBTRAININGPRE2
+  == KORGANJ IF ~InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @3867 /* Ach. It be a marvelous wonder to cut through wee beasties an' get paid fer the pleasure. */
+  == MINSCJ IF ~InParty("Minsc") InMyArea("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN @3748 /* Why must we fight defenceless animals? Boo does not think this is a very heroic act. */
+  == AERIEJ IF ~InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @3863 /* D-do we... have to... kill animals? I would never think to hurt an innocent creature… this is nothing like the circus. This is WRONG. */
   == CERNDJ IF ~InParty("Cernd") InMyArea("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN @3752 /* These twisted animals are an affront to Nature. Balance requires that we must purge them. */
-  == NALIAJ IF ~InParty("Cernd") InMyArea("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID) InParty("Nalia") InMyArea("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @3753 /* Can we save any of them? They will just keep fighting until they are all dead in the end. */
-  == CERNDJ IF ~InParty("Cernd") InMyArea("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID) InParty("Nalia") InMyArea("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @3754 /* Calmly, dear Nalia, we shall not break as the branches of an oak in a summer storm. */
-  == NALIAJ IF ~InParty("Cernd") InMyArea("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID) InParty("Nalia") InMyArea("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @3755 /* I hope you are right. */
-END
-
-INTERJECT_COPY_TRANS OHBSTIRV 7 ZBTRAININGPRE3
-  == AERIEJ IF ~InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @3863 /* D-do we ... have to ... kill animals? I loved animals at the circus. Their trainers loved them too and wouldn't think to hurt them as they showed how beautiful, strong, and smart they were. T-this isn't like the circus, this is WRONG. */
-  == RASAADJ IF ~InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID) InParty("RASAAD") InMyArea("RASAAD") !StateCheck("RASAAD",CD_STATE_NOTVALID)~ THEN @3864 /* Nature exists in cycles, gentle one. Even those who are beautiful or strong must one day be embraced by the shadow of death and rebirth. */
-  == AERIEJ IF ~InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID) InParty("RASAAD") InMyArea("RASAAD") !StateCheck("RASAAD",CD_STATE_NOTVALID)~ THEN @3865 /* B-but we don't have to help them, do we? */
-  == RASAADJ IF ~InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID) InParty("RASAAD") InMyArea("RASAAD") !StateCheck("RASAAD",CD_STATE_NOTVALID)~ THEN @3866 /* We are but the wheel on which existence turns. None may escape their part. */
-END
-
-// After Training match 1
-INTERJECT_COPY_TRANS OHBSTIRV 1 ZBTRAININGPOST1
-  == KORGANJ IF ~InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @3867 /* Ach. It be a marvelous wonder to cut through wee beasties an' get paid fer the pleasure. Count out yer coin, we'll slaughter yon bloody puppies an' empty yer pockets! */
-  == EDWINJ IF ~InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID) InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @3868 /* Yes, the money. (This moron of a dwarf is so blinded by coin he rarely sees past his own nose). */
-  == KORGANJ IF ~InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID) InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @3869 /* Wizard, yer robes are open and I see how dainty yon smallclothes be. Don't trifle with th' coin! */
-  == EDWINJ IF ~InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID) InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @3870 /* Of course. (Bah, Can we find a new block of meat to stand behind?) */
+  == OHBSTIRV IF ~InParty("Minsc") InMyArea("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN @3904 /* Defenceless? Heh, you’re in for a nasty surprise, slave. C’mon, git going! */
 END

@@ -3739,7 +3739,7 @@
 @3745 = ~Oh, come on! You *know* that's not true. ...Maybe I'll turn you into a chicken and see how much you like being the butt of the joke.~
 @3746 = ~Do not give credibility to these lies. He hopes to unsettle us. We must rise above his barbs.~
 @3747 = ~Hrrrmph. Snort!~
-@3748 = ~Boo? What is it, Boo? Boo demands to know why we need to kill defenseless animals for fun?~
+@3748 = ~Why must we fight defenceless animals? Boo does not think this is a very heroic act.~
 @3749 = ~To pour out their black heart into the world, Minsc. Only scum find joy in it. This Stirv deserves no mercy when justice comes.~
 @3750 = ~Outrage! The butts of evil must be liberally kicked into playing nice with animals.~
 @3751 = ~Yes, none shall escape nature's wrath.~
@@ -3752,13 +3752,13 @@
 @3758 = ~We even have a bard performing soon, it should make your wait that much easier.~
 @3759 = ~As a showin' a good intent, they even offer ye this bit 'a information. 'Tis a currency around here.~
 @3860 = ~Hmph, so you lived. Well, how about another match? Some of my bigger puppies are hungry and you look like you got some meat on your bones!~
-@3861 = ~Damn slaves! Dennaton is making me give you a prize for winning against all of my puppies. So here, take it.~
+@3861 = ~You weren’t supposed to win! You were supposed to be rended limb from limb and devoured! Bah, I suppose you gave my puppies some much needed exercise either way. Here, take this—but don’t expect any more handouts, slave!~
 @3862 = ~Another match, Stirv. Playtime for the puppies!~
-@3863 = ~D-do we ... have to ... kill animals? I loved animals at the circus. Their trainers loved them too and wouldn't think to hurt them as they showed how beautiful, strong, and smart they were. T-this isn't like the circus, this is WRONG.~
+@3863 = ~D-do we... have to... kill animals? I would never think to hurt an innocent creature… this is nothing like the circus. This is WRONG.~
 @3864 = ~Nature exists in cycles, gentle one. Even those who are beautiful or strong must one day be embraced by the shadow of death and rebirth.~
 @3865 = ~B-but we don't have to help them, do we?~
 @3866 = ~We are but the wheel on which existence turns. None may escape their part.~
-@3867 = ~Ach. It be a marvelous wonder to cut through wee beasties an' get paid fer the pleasure. Count out yer coin, we'll slaughter yon bloody puppies an' empty yer pockets!~
+@3867 = ~Ach. It be a marvelous wonder to cut through wee beasties an' get paid fer the pleasure.~
 @3868 = ~Yes, the money. (This moron of a dwarf is so blinded by coin he rarely sees past his own nose).~
 @3869 = ~Wizard, yer robes are open and I see how dainty yon smallclothes be. Don't trifle with th' coin!~
 @3870 = ~Of course. (Bah, Can we find a new block of meat to stand behind?)~
@@ -3795,3 +3795,4 @@
 @3901 = ~Perhaps I was mistaken, but I most certainly recognize you! Any skald worthy of his beard in these parts knows the tales of <CHARNAME> of Baldur’s Gate—though… I can’t tell you what these parts actually are.~
 @3902 = ~Mine friend, if you looked into my eyes right now you would see temptation swimming around like so many skipjack tuna. I do not like to disappoint you, but all I wish to do right now is find a place to sit and drink.~
 @3903 = ~If it comes to a fight, though, you can rely on Voghiln! Now, I am going to go on a grand quest… to find a kitchen.~
+@3904 = ~Defenceless? Heh, you’re in for a nasty surprise, slave. C’mon, git going!~

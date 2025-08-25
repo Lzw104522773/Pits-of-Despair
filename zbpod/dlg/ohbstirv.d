@@ -12,7 +12,7 @@ IF ~Global("ZB_STRIV_TRAINING_CHECK","GLOBAL",1) Global("ZB_STRIV_REWARD_1","GLO
 END
 
 IF ~Global("ZB_STRIV_TRAINING_CHECK", "GLOBAL", 3)  Global("ZB_STRIV_REWARD_3","GLOBAL",0)~ THEN BEGIN 2
-  SAY @3861 /* Damn slaves! Dennaton is making me give you a prize for winning against all of my puppies. So here, take it. */
+  SAY @3861 /* You weren’t supposed to win! You were supposed to be rended limb from limb and devoured! Bah, I suppose you gave my puppies some much needed exercise either way. Here, take this—but don’t expect any more handouts, slave! */
   IF ~~ THEN DO ~SetGlobal("ZB_STRIV_REWARD_3","GLOBAL",1) GiveItemCreate("ZBSTWR",Player1,1,0,0)~ EXIT
 END
 

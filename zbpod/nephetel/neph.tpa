@@ -4,13 +4,18 @@
 /// Portrait ///
 COPY ~%MOD_FOLDER%/nephetel/portrait~ ~override~
 
+/// Sounds ///
+ACTION_BASH_FOR ~%MOD_FOLDER%/nephetel/wav/~ ~zbnss*wav~ BEGIN
+  COPY ~%BASH_FOR_FILESPEC%~ ~override~
+END
+
 /// Creature files ///
 // SoA
 COPY ~%MOD_FOLDER%/nephetel/cre/zbneph.cre~ ~override~
   SAY NAME1 @15001
   SAY NAME2 @15001
-  SAY MORALE @195 /* I'm not dying for a lost cause. [] */
-  SAY HAPPY @196 /* I like this. I feel like dancing. [] */
+  SAY MORALE @195 /* I'm not dying for a lost cause. */
+  SAY HAPPY @196 /* I like this. I feel like dancing. */
   SAY UNHAPPY_ANNOYED @197 /* Another shining example of why I keep my expectations low. */
   SAY UNHAPPY_SERIOUS @198 /* If you didn't quite get the hint: pull it together, or I'm gone. */
   SAY UNHAPPY_BREAKING @199 /* That's it. I'm done with you. I'll see you… from the shadows. */
@@ -22,6 +27,7 @@ COPY ~%MOD_FOLDER%/nephetel/cre/zbneph.cre~ ~override~
   SAY BATTLE_CRY3 @205 /* I strike from the shadows. */
   SAY BATTLE_CRY4 @206 /* There's only darkness where you're going. */
   SAY BATTLE_CRY5 @207 /* I move for the kill. */
+  SAY DAMAGE @244 /* Ugh. */
   SAY DYING @208 /* Not yet! */
   SAY HURT @209 /* I need healing. */
   SAY AREA_FOREST @210 /* Don't be fooled by the appearance of harmony. There's danger everywhere out here. */
@@ -48,9 +54,9 @@ COPY ~%MOD_FOLDER%/nephetel/cre/zbneph.cre~ ~override~
   SAY CRITICAL_MISS @231 /* Ugh! Missed. */
   SAY TARGET_IMMUNE @232 /* Useless! */
   SAY INVENTORY_FULL @233 /* I'm out of space—unless you want it hanging off my horns. */
-  SAY PICKED_POCKET @234 /* I'm sure it won't be missed. */
+  SAY PICKED_POCKET @234 /* Mine now. */ /* I'm sure it won't be missed. */
   SAY HIDDEN_IN_SHADOWS @235 /* I vanish. */
-  SAY SPELL_DISRUPTED @236 /* Gah! I lost my focus. */
+  SAY SPELL_DISRUPTED @236 /* Ugh! I lost my focus. */
   SAY 0x1d0 @237 /* Stop it. I'm ticklish. */
   SAY 0x1d4 @238 /* Inconceivable! */
   SAY 0x1d8 @239 /* You've come to kidnap what I've rightfully stolen! */

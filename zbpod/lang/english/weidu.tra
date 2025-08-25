@@ -323,8 +323,8 @@ STATISTICS:
 Equipped abilities:
 – Pick Pockets and Open Locks: +20%
 – Find Traps: +10%
-– Fist damage: +3
-– Fist to-hit: +2
+– Damage: +1 (+2 for fist attacks)
+– THAC0: +2
 – Backstabs are particularly forceful and may render the target unconscious for 1 turn if a save vs. Death is failed. Further damage will wake them up
 
 Weight: 2~

@@ -2386,7 +2386,7 @@ Global("OHB_101","GLOBAL",2)
 ~ THEN BEGIN 210
   SAY @846 /* My performers are victorious!  */
   IF ~~ THEN DO ~SetGlobal("OHB_101","GLOBAL",-1)
-GiveGoldForce(500)
+GiveGoldForce(1000)
 SetGlobal("ohb_cutscene_exit","global",1)
 ~ EXIT
   IF ~  GlobalLT("OHB_LAST_BATTLE","GLOBAL",101)
@@ -2403,7 +2403,7 @@ Global("OHB_102","GLOBAL",2)
 ~ THEN BEGIN 211
   SAY @847 /* The champions of Baeloth's Pits have won! */
   IF ~~ THEN DO ~SetGlobal("OHB_102","GLOBAL",-1)
-GiveGoldForce(750)
+GiveGoldForce(1500)
 SetGlobal("ohb_cutscene_exit","global",1)
 ~ EXIT
   IF ~  GlobalLT("OHB_LAST_BATTLE","GLOBAL",102)
@@ -2420,7 +2420,7 @@ Global("OHB_103","GLOBAL",2)
 ~ THEN BEGIN 212
   SAY @846 /* My performers are victorious!  */
   IF ~~ THEN DO ~SetGlobal("OHB_103","GLOBAL",-1)
-GiveGoldForce(1000)
+GiveGoldForce(2000)
 SetGlobal("ohb_cutscene_exit","global",1)
 ~ EXIT
   IF ~  GlobalLT("OHB_LAST_BATTLE","GLOBAL",103)
@@ -2437,7 +2437,7 @@ Global("OHB_104","GLOBAL",2)
 ~ THEN BEGIN 213
   SAY @847 /* The champions of Baeloth's Pits have won! */
   IF ~~ THEN DO ~SetGlobal("OHB_104","GLOBAL",-1)
-GiveGoldForce(1250)
+GiveGoldForce(2500)
 SetGlobal("ohb_cutscene_exit","global",1)
 ~ EXIT
   IF ~  GlobalLT("OHB_LAST_BATTLE","GLOBAL",104)
@@ -2454,12 +2454,12 @@ Global("OHB_105","GLOBAL",2)
 ~ THEN BEGIN 214
   SAY @848 /* A victory worthy of the epics! */
   IF ~Global("ZB_SPAWN_NEPHY_FIGHT5","GLOBAL",2)~ THEN DO ~SetGlobal("OHB_105","GLOBAL",-1)
-GiveGoldForce(1500)
+GiveGoldForce(3000)
 ActionOverride("ZBNEPHA",DestroySelf()) // Destory Neph Arena
 SetGlobal("ohb_cutscene_exit","global",1)
 ~ EXIT
   IF ~!Global("ZB_SPAWN_NEPHY_FIGHT5","GLOBAL",2)~ THEN DO ~SetGlobal("OHB_105","GLOBAL",-1)
-GiveGoldForce(1500)
+GiveGoldForce(3000)
 SetGlobal("ohb_cutscene_exit","global",1)
 ~ EXIT
   IF ~  GlobalLT("OHB_LAST_BATTLE","GLOBAL",105)

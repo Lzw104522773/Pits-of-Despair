@@ -7,7 +7,6 @@ THEN
         Wait(2)
         AddAreaType(CANRESTOTHER)
         MoveViewPoint([2665.3355],INSTANT)
-        ActionOverride("ohbdenna",GiveGoldForce(15000))
         ActionOverride("ohbhort",DestroySelf())
         ActionOverride("ohbfeldr",DestroySelf())
         ActionOverride("ohbvoghi",DestroySelf())

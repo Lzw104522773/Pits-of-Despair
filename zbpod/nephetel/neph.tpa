@@ -54,7 +54,7 @@ COPY ~%MOD_FOLDER%/nephetel/cre/zbneph.cre~ ~override~
   SAY CRITICAL_MISS @231 /* Ugh! Missed. */
   SAY TARGET_IMMUNE @232 /* Useless! */
   SAY INVENTORY_FULL @233 /* I'm out of space—unless you want it hanging off my horns. */
-  SAY PICKED_POCKET @234 /* Mine now. */ /* I'm sure it won't be missed. */
+  SAY PICKED_POCKET @234 /* Mine now. */
   SAY HIDDEN_IN_SHADOWS @235 /* I vanish. */
   SAY SPELL_DISRUPTED @236 /* Ugh! I lost my focus. */
   SAY 0x1d0 @237 /* Stop it. I'm ticklish. */

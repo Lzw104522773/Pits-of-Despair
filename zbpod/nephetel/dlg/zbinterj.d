@@ -15,12 +15,12 @@ END
 
 /// Before match 1, If PC has completed at least 1 training match
 INTERJECT_COPY_TRANS ZBNEPHJ 0 ZB_NEPH_INTERJECT_1.1
-  == JAHEIRAJ IF ~GlobalGT("zb_train_spawn","GLOBAL",0) InParty("JAHEIRA") InMyArea("JAHEIRA") !StateCheck("JAHEIRA",CD_STATE_NOTVALID)~ THEN @43 /* You think it's a good job to destroy nature's children? We do as the balance dictates. */ /* Better them to rejoin nature instead of being left to rot in this hole. */
+  == JAHEIRAJ IF ~GlobalGT("zb_train_spawn","GLOBAL",0) InParty("JAHEIRA") InMyArea("JAHEIRA") !StateCheck("JAHEIRA",CD_STATE_NOTVALID)~ THEN @43 /* You think it's a good job to destroy nature's children? We do as the balance dictates. */
 END
 
 INTERJECT_COPY_TRANS ZBNEPHJ 1 ZB_NEPH_INTERJECT_1.2
   == AERIEJ IF ~InParty("AERIE") InMyArea("AERIE") !StateCheck("AERIE",CD_STATE_NOTVALID)~ THEN @44 /* It’s awful to make them fight like this... No one deserves it. */
-  == ANOMENJ IF ~InParty("ANOMEN") InMyArea("ANOMEN") !StateCheck("ANOMEN",CD_STATE_NOTVALID)~ THEN @131 /* This Dennaton’s days are numbered, by Helm I swear it to be so. In the meantime, however, let us rid Faerûn of this band of scum. */ /*  This Dennaton’s days are numbered, by Helm I swear it to be so. In the meantime, however, let us rid Faerûn of this band of scum. */
+  == ANOMENJ IF ~InParty("ANOMEN") InMyArea("ANOMEN") !StateCheck("ANOMEN",CD_STATE_NOTVALID)~ THEN @131 /* This Dennaton’s days are numbered, by Helm I swear it to be so. In the meantime, however, let us rid Faerûn of this band of scum. */
   == DORNJ IF ~InParty("DORN") InMyArea("DORN") !StateCheck("DORN",CD_STATE_NOTVALID)~ THEN @139 /* No self respecting warband would allow themselves to be taken alive. Grummsh would flay their skin from their weakling bones. */
   == RASAADJ IF ~InParty("RASAAD") InMyArea("RASAAD") !StateCheck("RASAAD",CD_STATE_NOTVALID)~ THEN @133 /* I see only prisoners here, forced to feed this cruel spectacle. May the Moonmaiden grant them peace. */
   == KORGANJ IF ~InParty("KORGAN") InMyArea("KORGAN") !StateCheck("KORGAN",CD_STATE_NOTVALID)~ THEN @132 /* A bloody slaughter it will be. An' bloody satisfying! */

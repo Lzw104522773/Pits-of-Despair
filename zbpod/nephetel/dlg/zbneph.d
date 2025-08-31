@@ -3,19 +3,19 @@ BEGIN ZBNEPH
 /// Introduction ///
 IF ~Global("ZB_NEPH_BEGIN","GLOBAL",1) Global("ZB_NEPH_INTRO","GLOBAL",0) ReputationLT(Player1,7)~ THEN BEGIN zbnepharenaintro1
   SAY @36 /* Look who it is! Your reputation precedes you—please, try to keep three paces back. I wouldn’t want to stain this lovely white with the blood on your hands. */
-  IF ~~ THEN REPLY @12 /* Rumors travel fast here, it seems. And you are…? */ /*  Rumors travel fast here, it seems. And you are…? */ DO ~SetGlobal("ZB_NEPH_INTRO","GLOBAL",1)~ GOTO zbneph1
+  IF ~~ THEN REPLY @12 /* Rumors travel fast here, it seems. And you are…? */ DO ~SetGlobal("ZB_NEPH_INTRO","GLOBAL",1)~ GOTO zbneph1
   IF ~~ THEN REPLY @13 /* I suppose introductions are in order. */ DO ~SetGlobal("ZB_NEPH_INTRO","GLOBAL",1)~ GOTO zbneph1
 END
 
 IF ~Global("ZB_NEPH_BEGIN","GLOBAL",1) Global("ZB_NEPH_INTRO", "GLOBAL",0) ReputationGT(Player1,15)~ THEN BEGIN zbnepharenaintro2
   SAY @37 /* I’ve heard good things about you from the folk here. Being quick to make an impression is good, but take care that you don’t rub people the wrong way. This place is full of large personalities. */
-  IF ~~ THEN REPLY @12 /* Rumors travel fast here, it seems. And you are…? */ /*  Rumors travel fast here, it seems. And you are…? */ DO ~SetGlobal("ZB_NEPH_INTRO","GLOBAL",1)~ GOTO zbneph1
+  IF ~~ THEN REPLY @12 /* Rumors travel fast here, it seems. And you are…? */ DO ~SetGlobal("ZB_NEPH_INTRO","GLOBAL",1)~ GOTO zbneph1
   IF ~~ THEN REPLY @13 /* I suppose introductions are in order. */ DO ~SetGlobal("ZB_NEPH_INTRO","GLOBAL",1)~ GOTO zbneph1
 END
 
 IF ~Global("ZB_NEPH_BEGIN","GLOBAL",1) Global("ZB_NEPH_INTRO", "GLOBAL",0) ReputationGT(Player1,6) ReputationLT(Player1,17)~ THEN BEGIN zbnepharenaintro3
   SAY @11 /* Well, what do we have here? The mighty Bhaalspawn came to say hello. I hear that  you’re rather unique among your siblings—take care you don’t attract the wrong sort of attention. This place is full of large personalities. */
-  IF ~~ THEN REPLY @12 /* Rumors travel fast here, it seems. And you are…? */ /*  Rumors travel fast here, it seems. And you are…? */ DO ~SetGlobal("ZB_NEPH_INTRO","GLOBAL",1)~ GOTO zbneph1
+  IF ~~ THEN REPLY @12 /* Rumors travel fast here, it seems. And you are…? */ DO ~SetGlobal("ZB_NEPH_INTRO","GLOBAL",1)~ GOTO zbneph1
   IF ~~ THEN REPLY @13 /* I suppose introductions are in order. */ DO ~SetGlobal("ZB_NEPH_INTRO","GLOBAL",1)~ GOTO zbneph1
 END
 
@@ -44,14 +44,14 @@ END
 
 /* main arena hub */
 IF ~~ THEN BEGIN zbnepharenahub01
-  SAY @21 /* Known as the Hero of Baldur's Gate? Hmm, and as far as Dennaton is concerned the main attraction in his three ring circus. You don't look as savage as I expected, I can see why he was interested in you. */ /* I hope you’re having a tolerable time here in the pits, <CHARNAME>. As far as Dennaton is concerned, you’re the main attraction in this three-ring circus, so I’d be surprised if you didn’t get a little special treatment*/
+  SAY @21 /* Known as the Hero of Baldur's Gate? Hmm, and as far as Dennaton is concerned the main attraction in his three ring circus. You don't look as savage as I expected, I can see why he was interested in you. */
   IF ~~ THEN DO ~SetGlobal("ZB_NEPH_INTRO_RESPONSE","GLOBAL",10)~ GOTO zbnepharenahub0
 END
 
 IF ~Global("ZB_NEPH_INTRO_RESPONSE","GLOBAL",10) Global("ZB_NEPH_INTRO_QUESTION","GLOBAL",0)~ THEN BEGIN zbnepharenahub0
   SAY @22 /* So, is there anything I can do for you? */
   IF ~~ THEN REPLY @23 /* How is it that you came to this place? You don’t seem trapped here as the other fighters are. */ GOTO zbnepharena1
-  IF ~~ THEN REPLY @39 /* I only know your name, Could you tell me a bit about yourself? */ /* I only know your name. Could you tell me a bit about yourself? */  GOTO zbnepharena2
+  IF ~~ THEN REPLY @39 /* I only know your name, Could you tell me a bit about yourself? */
   IF ~~ THEN REPLY @24 /* Do you have any idea how to escape this place? */ GOTO zbnepharena3
   IF ~~ THEN REPLY @245 /* What can you tell me about the others here? */ GOTO zbnepharena4
   IF ~~ THEN REPLY @25 /* You sound familiar. There was a messenger who got me into this mess and your voice is suspiciously similar… */ GOTO zbnepharena5
@@ -61,7 +61,7 @@ END
 IF ~Global("ZB_NEPH_INTRO_RESPONSE","GLOBAL",10) Global("ZB_NEPH_INTRO_QUESTION","GLOBAL",0)~ THEN BEGIN zbnepharenahub
   SAY @33 /* Anything else I can clear up for you? */
   IF ~~ THEN REPLY @23 /* How is it that you came to this place? You don’t seem trapped here as the other fighters are. */ GOTO zbnepharena1
-  IF ~~ THEN REPLY @39 /* I only know your name, Could you tell me a bit about yourself? */ /* I only know your name. Could you tell me a bit about yourself? */  GOTO zbnepharena2
+  IF ~~ THEN REPLY @39 /* I only know your name, Could you tell me a bit about yourself? */
   IF ~~ THEN REPLY @24 /* Do you have any idea how to escape this place? */ GOTO zbnepharena3
   IF ~~ THEN REPLY @245 /* What can you tell me about the others here? */ GOTO zbnepharena4
   IF ~~ THEN REPLY @25 /* You sound familiar. There was a messenger who got me into this mess and your voice is suspiciously similar… */ GOTO zbnepharena5
@@ -233,7 +233,7 @@ IF ~~ zbnephescape
 END
 
 IF ~Global("ZB_NEPH_ESCAPE_0","GLOBAL",2)~ 17
-  SAY @71 /*  You made it. Good. Now, we are both trapped here, yes? And I expect that you wish to escape this gods-forsaken pit just as much as I do, so I have a proposition for you. */ /* You made it. Good. Now, we are both trapped here, yes? And I expect that you wish to escape this gods-forsaken pit just as much as I do, so I have a proposition for you. */
+  SAY @71 /*  You made it. Good. Now, we are both trapped here, yes? And I expect that you wish to escape this gods-forsaken pit just as much as I do, so I have a proposition for you. */
   IF ~~ THEN REPLY @72 /* Speak on, I am most interested in what you have to say. */ DO ~SetGlobal("ZB_NEPH_ESCAPE_0","GLOBAL",3)~ GOTO 18
   IF ~~ THEN REPLY @73 /* You have a means to escape? Tell me! */ DO ~SetGlobal("ZB_NEPH_ESCAPE_0","GLOBAL",3)~ GOTO 19
   IF ~~ THEN REPLY @74 /* I’m certainly trapped here. You, I’m not so sure about. */ DO ~SetGlobal("ZB_NEPH_ESCAPE_0","GLOBAL",3)~ GOTO 20
@@ -255,7 +255,7 @@ IF ~~ 20
 END
 
 IF ~Global("ZB_NEPH_ESCAPE_0","GLOBAL",3)~ 21
-  SAY @70 /* Oh, that is horrible! Boo shall never face such a grisly fate. When it is our time, he will have the burial of a true Rashemi berserker alongside me! */ /* During your recent battles, I’ve been buttering up one of the young Red Wizards that watches you fight. The fellow likes to dip a bit too heavily into his drink while watching, you see. Apparently he’s been using a magical charm to come and go from the pits as he pleases. */
+  SAY @70 /* Oh, that is horrible! Boo shall never face such a grisly fate. When it is our time, he will have the burial of a true Rashemi berserker alongside me! */
   =
   @80 /* The very charm I now have in my pocket. */
   IF ~~ THEN REPLY @81 /* You, Nephetel, are brilliant. */ GOTO 22
@@ -415,6 +415,6 @@ IF ~GlobalGT("ZB_NEPHY_FRIEND","GLOBAL",0) Global("ZB_NEPH_COPPERCORENT","GLOBAL
 END
 
 IF ~Global("ZB_NEPH_JOINS","GLOBAL",0)~ ZBNEPHREALLYJOIN
-  SAY @115 /* Oh, I'll happily join your merry band. */ /*  Oh, I'll happily join your merry band. */
+  SAY @115 /* Oh, I'll happily join your merry band. */
   IF ~~ DO ~SetGlobal("ZB_NEPH_JOINS","GLOBAL",1) JoinParty()~ EXIT
 END

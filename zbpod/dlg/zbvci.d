@@ -1,13 +1,3 @@
-APPEND PLAYER1
-
-IF ~Global("ZBPODINTRO","GLOBAL",1)~ THEN BEGIN ZBPODIntro
-SAY @3688 /* Once more you find yourself in chains, a prisoner of fate's cruel design. Yet you escaped Irenicus' prison and emerged stronger for it. */
-+ ~NumInPartyGT(1) Global("ZBBP2inBG2","GLOBAL",1)~ + @3689 /* Who is this Dennaton? Where are we? */ EXTERN Player1 ZBPoDIntro2
-+ ~!NumInPartyGT(1) Global("ZBBP2inBG2","GLOBAL",1)~ + @3690 /* Who is this Dennaton? Where am I? */ DO ~SetGlobal("ZBPODINTRO","GLOBAL",2)~ EXIT
-END
-
-END // FOR TOP APPEND
-
 // Minsc Najim
 INTERJECT_COPY_TRANS OHBNAJIM 0 ZBNAJIM_MINSC
   == MINSCJ IF ~InParty("Minsc") InMyArea("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN @3872 /* There is no danger with Minsc and Boo at your side! Take heed, floaty-man, the hamster will protect you! */
@@ -15,51 +5,49 @@ END
 
 // Valygar Joker
 INTERJECT_COPY_TRANS OHBJOKER 26 ZBJOKER_VALYGAR
- == VALYGARJ IF ~InParty("Valygar") InMyArea("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ THEN @3872 /* There is no danger with Minsc and Boo at your side! Take heed, floaty-man, the hamster will protect you! */ /* Without your disguises there is nothing to stop us from cutting you down, deceiver. Choose your next words carefully. */
+ == VALYGARJ IF ~InParty("Valygar") InMyArea("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ THEN @3872 /* There is no danger with Minsc and Boo at your side! Take heed, floaty-man, the hamster will protect you! */
 END
 
 // Dormamus
 INTERJECT_COPY_TRANS OHBJOKER 26 ZBDORMAMUS_REMARK
-  == EDWINJ IF ~InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @3875 /* What is this pitiful charade? Must we be caught up in every fool's drama? */ /* What is this pitiful charade? Must we be caught up in every fool’s drama? */
+  == EDWINJ IF ~InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @3875 /* What is this pitiful charade? Must we be caught up in every fool's drama? */
   == AERIEJ IF ~InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @3876 /* They look quite p-powerful, <CHARNAME>. Do we really have a chance against them? */
-  == ANOMENJ IF ~InParty("Anomen") InMyArea("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @3877 /* Lay a hand on me, and you'll wish you never left whatever hole you crept out from, villains! */ /* Lay a hand on me, and you’ll wish you never left whatever hole you crept out from, villains! */
-  == HAERDAJ IF ~InParty("HaerDalis") InMyArea("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN @3878 /* The events of the day continue to become livelier and livelier, don't they? */ /* The events of the day continue to become livelier and livelier, don’t they? */
-  == KORGANJ IF ~InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @3879 /* What're we standing around yapping for? Let's get to cracking some skulls! */ /* What’re we standing around yapping for? Let’s get to cracking some skulls! */
-  == NEERAJ IF ~InParty("NEERA") InMyArea("NEERA") !StateCheck("NEERA",CD_STATE_NOTVALID)~ THEN @3880 /* Nuh-uh. No way. I've had enough mysterious forces trying to capture me for one lifetime, thank you very much. */ /* Nuh-uh. No way. I’ve had enough mysterious forces trying to capture me for one lifetime, thank you very much. */
+  == ANOMENJ IF ~InParty("Anomen") InMyArea("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @3877 /* Lay a hand on me, and you'll wish you never left whatever hole you crept out from, villains! */
+  == HAERDAJ IF ~InParty("HaerDalis") InMyArea("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN @3878 /* The events of the day continue to become livelier and livelier, don't they? */
+  == KORGANJ IF ~InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @3879 /* What're we standing around yapping for? Let's get to cracking some skulls! */
+  == NEERAJ IF ~InParty("NEERA") InMyArea("NEERA") !StateCheck("NEERA",CD_STATE_NOTVALID)~ THEN @3880 /* Nuh-uh. No way. I've had enough mysterious forces trying to capture me for one lifetime, thank you very much. */
 END
 
-CHAIN Player1 ZBPoDIntro2
-@3691 /* Your companions stand beside you, their expressions betraying the same confusion and unease. */
-DO ~SetGlobal("ZBPODINTRO","GLOBAL",2)~
-== AERIEJ IF ~InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @3692 /* Where are we? I feel...strange. And I can't access my magic. Be careful, <CHARNAME>. */
-== ANOMENJ IF ~InParty("Anomen") InMyArea("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @3693 /* An ill omen. Best we explore and gain our bearings. */
-== CERNDJ IF ~InParty("Cernd") InMyArea("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN @3694 /* Nature cringes from this prison of steel and stone. Let us find our way out, or better yet, sunder this choking place. */
-== EDWINJ IF ~InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @3695 /* My spells! Something...restricts it. (Of all the blasted places it had to be an anti-magic zone.) No matter. Nothing can contain Edwin Odesseiron for long. */
-== HAERDAJ IF ~InParty("HaerDalis") InMyArea("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN @3696 /* Where do we find ourselves now, I wonder? Being thrown into the unknown on a whim - it almost reminds me of my beloved Sigil. Keys, portals, danger around every corner. */
-== IMOEN2J IF ~InParty("Imoen") InMyArea("Imoen") !StateCheck("Imoen",CD_STATE_NOTVALID)~ THEN @3697 /* Heh. Seems we're trapped once again. This is starting to feel a little personal now. Let's break out of here fast, alright? */
-== JAHEIRAJ IF ~InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @3698 /* We know nothing of this place. Or of this Dennaton. Be wary, <CHARNAME>, but press forward. We gain nothing by standing still. */
-== JANJ IF ~InParty("JAN") InMyArea("JAN") !StateCheck("JAN",CD_STATE_NOTVALID)~ THEN @3699 /* An intrepid gnome always makes the best of any situation. And this is a situation, to be sure! Potential customers around every corner. I'll start perfecting my sales pitch while we look around. There has to be someone in charge around here. */
-== KELDORJ IF ~InParty("Keldorn") InMyArea("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN @3700 /* I sense evil within this place, though also those that do not mean us harm. Let us speak to the inhabitants and discern friend from foe. */
-== KORGANJ IF ~InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @3701 /* What are we standing about for? Let's get to the killing! */
-== MAZZYJ IF ~InParty("Mazzy") InMyArea("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN @3702 /* Captured once again - as though the echoes of the Shadow Lord's capture do not still linger. Let us see about earning our freedom, <CHARNAME>. I have no wish to remain here for long. */
-== MINSCJ IF ~InParty("Minsc") InMyArea("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN @3703 /* The people here are not free, <CHARNAME>. As heroes, we must break their chains. Boo will help. */
-== NALIAJ IF ~InParty("Nalia") InMyArea("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @3704 /* My magic doesn't respond, not like it normally would, I think we're in an anti-magic field. */
-== VALYGARJ IF ~InParty("Valygar") InMyArea("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ THEN @3705 /* I know not where we are, <CHARNAME>, but I suggest we watch our steps. */
-== VICONIJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @3706 /* Oloth plynn dos! I do not care to be snatched up, and teleported elsewhere, <CHARNAME>. You best get us out of here fast. */
-== YOSHJ IF ~InParty("Yoshimo") InMyArea("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID)~ THEN @3707 /* Tricked and then caged. Remind me to thank our captor with something sharp and precise. Ideally between their ribs. */
-== DORNJ IF ~InParty("Dorn") InMyArea("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN @3708 /* Much danger may lurk in the darkness here. Unfortunately for our enemies I have darkvision and my strikes *never* miss. */
-== HEXXATJ IF ~InParty("HEXXAT") InMyArea("HEXXAT") !StateCheck("HEXXAT",CD_STATE_NOTVALID)~ THEN @3709 /* Locked away like common cattle... How quaint. Let them savor their little victory. At least until we carve our way out. */
-== NEERAJ IF ~InParty("NEERA") InMyArea("NEERA") !StateCheck("NEERA",CD_STATE_NOTVALID)~ THEN @3710 /* Well...uh, my magic's not working. I mean, not all that strange, wild mage and all that, you know, really it does what it wants to. But I'm getting *nothing*. An anti-magic zone, maybe? */
-== RASAADJ IF ~InParty("RASAAD") InMyArea("RASAAD") !StateCheck("RASAAD",CD_STATE_NOTVALID)~ THEN @3711 /* The light of Selune will guide us even through this darkness. */
-== WILSONJ IF ~InParty("WILSON") InMyArea("WILSON") !StateCheck("WILSON",CD_STATE_NOTVALID)~ THEN @3712 /* Shuffle, growl. */
+INTERJECT_COPY_TRANS OHBVOGHI ZBVOGEXIT ZBPODINTRO2
+  == HAERDAJ IF ~InParty("HaerDalis") InMyArea("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN @3905 /* Where do we find ourselves now, I wonder? Being thrown into the unknown on a whim—it almost reminds me of my beloved Sigil. */
+  == MAZZYJ IF ~InParty("Mazzy") InMyArea("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN @3906 /* I do not see any bars trapping us, so I will count our blessings where we can get them. May Arvoreen watch over us. */
+  == JAHEIRAJ IF ~InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @3907 /* I am concerned as to our captor’s true identity. It is not many that can command a planetar into doing their bidding. Why they’d want a man like Voghiln is beyond me. */
+  == NEERAJ IF ~InParty("NEERA") InMyArea("NEERA") !StateCheck("NEERA",CD_STATE_NOTVALID)~ THEN @3908 /* Alright, it’s not just me, right? My magic is all gone. I’d *really* like to get out of here. */
+  == AERIEJ IF ~InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @3909 /* This isn’t good, <CHARNAME>. I… I can’t access my magic. Let’s be careful, alright? */
+  == EDWINJ IF ~InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @3910 /* My spells! They are being… restricted. Bah, no matter! Nothing can contain Edwin Odesseiron for long. (I cannot say the same for the rest of these monkeys, however…) */
+  == MINSCJ IF ~InParty("Minsc") InMyArea("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN @3911 /* To have been captured so easily… it puts a berserker’s heart to shame! Eh? What is that, Boo? …Ah, as wise as ever my miniature furry friend—it is THEIR mistake for inviting Minsc and friends into their lair! */
+  == KELDORJ IF ~InParty("Keldorn") InMyArea("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID) InParty("Minsc") InMyArea("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN @3912 /* Be careful not to work yourself into a battlerage just yet, Minsc. We must be cautious in this place—we have no idea how powerful our enemy is, nor their true intent. */
+  == ANOMENJ IF ~InParty("Anomen") InMyArea("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @3913 /* Well, if that man has survived as long as he has in this snake’s den, I suspect we’ll fare better. Let us find the villains that did this and put an end to them. */
+  == CERNDJ IF ~InParty("Cernd") InMyArea("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN @3914 /* Nature cringes from this prison of steel and stone. Let us find our way out, or better yet, sunder this abhorrent place. */
+  == YOSHJ IF ~InParty("Yoshimo") InMyArea("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID)~ THEN @3915 /* It’s from one drama to another with you, isn’t it? Ah, well. They say variety is the spice of life, after all. */
+  == IMOEN2J IF ~InParty("Imoen") InMyArea("Imoen") !StateCheck("Imoen",CD_STATE_NOTVALID)~ THEN @3916 /* Heh. Seems we're trapped all over again. This is starting to feel a little personal now. Let's break out of here fast, alright? */
 END
-++ @3713 /* We can help no one by standing here. */ EXIT
-++ @3714 /* Nothing else for it but to explore. */ EXIT
-++ @3715 /* They will regret caging me! */ EXIT
 
-/* companion interjections during the welcoming feast
-edwin should also react here, since we're in thay and the red wizards are involved, but i'll have glitter manage that. :3
-NONE OF THIS IS PROOFREAD OR FULLY IC YET - heavy edits expected */
+INTERJECT_COPY_TRANS OHBVOGHI ZBVOGGOODEXIT ZBPODINTRO2
+  == HAERDAJ IF ~InParty("HaerDalis") InMyArea("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN @3905 /* Where do we find ourselves now, I wonder? Being thrown into the unknown on a whim—it almost reminds me of my beloved Sigil. */
+  == MAZZYJ IF ~InParty("Mazzy") InMyArea("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN @3906 /* I do not see any bars trapping us, so I will count our blessings where we can get them. May Arvoreen watch over us. */
+  == JAHEIRAJ IF ~InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @3907 /* I am concerned as to our captor’s true identity. It is not many that can command a planetar into doing their bidding. Why they’d want a man like Voghiln is beyond me. */
+  == NEERAJ IF ~InParty("NEERA") InMyArea("NEERA") !StateCheck("NEERA",CD_STATE_NOTVALID)~ THEN @3908 /* Alright, it’s not just me, right? My magic is all gone. I’d *really* like to get out of here. */
+  == AERIEJ IF ~InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @3909 /* This isn’t good, <CHARNAME>. I… I can’t access my magic. Let’s be careful, alright? */
+  == EDWINJ IF ~InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @3910 /* My spells! They are being… restricted. Bah, no matter! Nothing can contain Edwin Odesseiron for long. (I cannot say the same for the rest of these monkeys, however…) */
+  == MINSCJ IF ~InParty("Minsc") InMyArea("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN @3911 /* To have been captured so easily… it puts a berserker’s heart to shame! Eh? What is that, Boo? …Ah, as wise as ever my miniature furry friend—it is THEIR mistake for inviting Minsc and friends into their lair! */
+  == KELDORJ IF ~InParty("Keldorn") InMyArea("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID) InParty("Minsc") InMyArea("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN @3912 /* Be careful not to work yourself into a battlerage just yet, Minsc. We must be cautious in this place—we have no idea how powerful our enemy is, nor their true intent. */
+  == ANOMENJ IF ~InParty("Anomen") InMyArea("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @3913 /* Well, if that man has survived as long as he has in this snake’s den, I suspect we’ll fare better. Let us find the villains that did this and put an end to them. */
+  == CERNDJ IF ~InParty("Cernd") InMyArea("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN @3914 /* Nature cringes from this prison of steel and stone. Let us find our way out, or better yet, sunder this abhorrent place. */
+  == YOSHJ IF ~InParty("Yoshimo") InMyArea("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID)~ THEN @3915 /* It’s from one drama to another with you, isn’t it? Ah, well. They say variety is the spice of life, after all. */
+  == IMOEN2J IF ~InParty("Imoen") InMyArea("Imoen") !StateCheck("Imoen",CD_STATE_NOTVALID)~ THEN @3916 /* Heh. Seems we're trapped all over again. This is starting to feel a little personal now. Let's break out of here fast, alright? */
+END
+
 INTERJECT_COPY_TRANS OHBTARTL 75 ZBSFEASTJAHEIRA
 == JAHEIRAJ IF ~InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @3716 /* For one so small of stature, his ego seems disproportionately sized. */
 END

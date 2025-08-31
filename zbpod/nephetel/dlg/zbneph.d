@@ -51,7 +51,7 @@ END
 IF ~Global("ZB_NEPH_INTRO_RESPONSE","GLOBAL",10) Global("ZB_NEPH_INTRO_QUESTION","GLOBAL",0)~ THEN BEGIN zbnepharenahub0
   SAY @22 /* So, is there anything I can do for you? */
   IF ~~ THEN REPLY @23 /* How is it that you came to this place? You don’t seem trapped here as the other fighters are. */ GOTO zbnepharena1
-  IF ~~ THEN REPLY @39 /* I only know your name, Could you tell me a bit about yourself? */
+  IF ~~ THEN REPLY @39 /* I only know your name, Could you tell me a bit about yourself? */ GOTO zbnepharena2
   IF ~~ THEN REPLY @24 /* Do you have any idea how to escape this place? */ GOTO zbnepharena3
   IF ~~ THEN REPLY @245 /* What can you tell me about the others here? */ GOTO zbnepharena4
   IF ~~ THEN REPLY @25 /* You sound familiar. There was a messenger who got me into this mess and your voice is suspiciously similar… */ GOTO zbnepharena5
@@ -61,7 +61,7 @@ END
 IF ~Global("ZB_NEPH_INTRO_RESPONSE","GLOBAL",10) Global("ZB_NEPH_INTRO_QUESTION","GLOBAL",0)~ THEN BEGIN zbnepharenahub
   SAY @33 /* Anything else I can clear up for you? */
   IF ~~ THEN REPLY @23 /* How is it that you came to this place? You don’t seem trapped here as the other fighters are. */ GOTO zbnepharena1
-  IF ~~ THEN REPLY @39 /* I only know your name, Could you tell me a bit about yourself? */
+  IF ~~ THEN REPLY @39 /* I only know your name, Could you tell me a bit about yourself? */ GOTO zbnepharena2
   IF ~~ THEN REPLY @24 /* Do you have any idea how to escape this place? */ GOTO zbnepharena3
   IF ~~ THEN REPLY @245 /* What can you tell me about the others here? */ GOTO zbnepharena4
   IF ~~ THEN REPLY @25 /* You sound familiar. There was a messenger who got me into this mess and your voice is suspiciously similar… */ GOTO zbnepharena5

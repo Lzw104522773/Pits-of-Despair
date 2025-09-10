@@ -367,6 +367,11 @@ ACTION_FOR_EACH priest IN
                 WRITE_ASCII 0x260 ~mopries1~ #8 // General Script (druid prebuff)
         END
     END
+// Deep Umber Hulk
+COPY ~%MOD_FOLDER%/creatures/match4umber~ ~override~
+COPY_EXISTING ~ohbumb01.cre~ ~override~
+    SAY 0x08 @15020
+    SAY 0x0c @15020
 
 // Drow Mage
 ACTION_IF FILE_EXISTS_IN_GAME ~OHBDRO03.cre~ BEGIN

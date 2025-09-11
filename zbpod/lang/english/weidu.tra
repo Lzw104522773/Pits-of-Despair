@@ -848,6 +848,21 @@ Requires:
 Weight: 2~
 @10082 = ~Defenses Pierced~
 
+@10090 = ~Robe of Skin~
+@10091 = ~ROBE OF SKIN DESCRIPTION HERE
+
+STATISTICS:
+
+Equipped abilities:
+- Armor Class: +1 vs. crushing, slashing & piercing attacks
+- Physical Resistances: +10%
+
+Charged Abilities:
+- Dragon Fist (1/day)
+  For two rounds, your physical attacks will stun enemies in addition to their normal effects.
+
+Weight: 4~
+
 
 // Creatures
 

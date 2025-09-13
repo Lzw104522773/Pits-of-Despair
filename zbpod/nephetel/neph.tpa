@@ -5,7 +5,7 @@
 COPY ~%MOD_FOLDER%/nephetel/portrait~ ~override~
 
 /// Sounds ///
-ACTION_BASH_FOR ~%MOD_FOLDER%/nephetel/wav/~ ~zbnss*wav~ BEGIN
+ACTION_BASH_FOR ~%MOD_FOLDER%/nephetel/wav/selection~ ~zbnss*wav~ BEGIN
   COPY ~%BASH_FOR_FILESPEC%~ ~override~
 END
 

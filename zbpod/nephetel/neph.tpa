@@ -5,9 +5,8 @@
 COPY ~%MOD_FOLDER%/nephetel/portrait~ ~override~
 
 /// Sounds ///
-ACTION_BASH_FOR ~%MOD_FOLDER%/nephetel/wav/selection~ ~zbnss*wav~ BEGIN
-  COPY ~%BASH_FOR_FILESPEC%~ ~override~
-END
+COPY ~%MOD_FOLDER%/nephetel/wav/selection~ ~override~
+
 
 /// Creature files ///
 // SoA

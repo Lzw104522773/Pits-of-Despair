@@ -574,23 +574,6 @@ Requires:
 Weight: 11~
 
 
-@10220 = ~Unbroken~
-@10221 = ~Unbroken description placeholder
-
-STATISTICS:
-
-Equipped abilities:
-– Constitution: +1
-– Magic resistance: +10%
-– Immunity to Maze and Imprisonment
-
-Charge ability:
-– Once per day, cast Freedom
-  Special: Anyone under the effect of imprisonment or maze are freed immediately upon casting
-  Area of Effect: Everyone in the area
-
-Weight: 3~
-
 @10210 = ~Binky~
 @10211 = ~This is the skeleton of a racing lizard that Jan received by trading for Lissa's prize turnip.
 
@@ -612,6 +595,39 @@ Equipped abilities:
 Charge abilities:
 – Cast Knock three times per day
   Special: Opens most non-magical locks~
+
+@10230 = ~Unbroken~
+@10231 = ~Unbroken description placeholder
+
+STATISTICS:
+
+Equipped abilities:
+– Constitution: +1
+– Magic resistance: +10%
+– Immunity to Maze and Imprisonment
+
+Charge ability:
+– Once per day, cast Freedom
+  Special: Anyone under the effect of imprisonment or maze are freed immediately upon casting
+  Area of Effect: Everyone in the area
+
+Weight: 3~
+
+@10290 = ~Robe of Skin~
+@10291 = ~ROBE OF SKIN DESCRIPTION HERE
+
+STATISTICS:
+
+Equipped abilities:
+- Armor Class: +1 vs. crushing, slashing & piercing attacks
+- Physical Resistances: +10%
+
+Charged Abilities:
+- Dragon Fist (1/day)
+  For two rounds, your physical attacks will stun enemies in addition to their normal effects.
+
+Weight: 4~
+
 
 // Imported BG1 Items
 @11000 = ~BG Imported Items~
@@ -847,22 +863,6 @@ Requires:
 
 Weight: 2~
 @10082 = ~Defenses Pierced~
-
-@10090 = ~Robe of Skin~
-@10091 = ~ROBE OF SKIN DESCRIPTION HERE
-
-STATISTICS:
-
-Equipped abilities:
-- Armor Class: +1 vs. crushing, slashing & piercing attacks
-- Physical Resistances: +10%
-
-Charged Abilities:
-- Dragon Fist (1/day)
-  For two rounds, your physical attacks will stun enemies in addition to their normal effects.
-
-Weight: 4~
-
 
 // Creatures
 

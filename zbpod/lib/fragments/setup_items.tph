@@ -377,8 +377,8 @@ COPY_EXISTING ~zbbink0.itm~ ~override~
 
 COPY ~%MOD_FOLDER%/items/unbroken~ ~override~
 COPY_EXISTING ~zbneck0.itm~ ~override~
-    SAY NAME2 @10220
-    SAY IDENTIFIED_DESC @10221
+    SAY NAME2 @10230
+    SAY IDENTIFIED_DESC @10231
 
 COPY ~%MOD_FOLDER%/items/grimsaw~ ~override~
 COPY ~%MOD_FOLDER%/items/redrobeofthay~ ~override~
@@ -392,7 +392,7 @@ COPY_EXISTING ~zbmemsh0.itm~ ~override~
 // Robe of Skin
 COPY ~%MOD_FOLDER%/items/robeofskin~ ~override~
 COPY_EXISTING ~zbskinrb.itm~ ~override~
-  SAY NAME2 @10090
-  SAY IDENTIFIED_DESC @10091
+  SAY NAME2 @10290
+  SAY IDENTIFIED_DESC @10291
 
 

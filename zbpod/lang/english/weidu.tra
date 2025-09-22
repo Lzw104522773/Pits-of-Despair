@@ -826,8 +826,8 @@ Weight: 4~
 
 @11064 = ~Limb Shattered~
 
-@10070 = ~Dark Knight's Belt~
-@10071 = ~Dark Knight's Belt description placeholder
+@11070 = ~Dark Knight's Belt~
+@11071 = ~Dark Knight's Belt description placeholder
 
 STATISTICS:
 
@@ -840,8 +840,8 @@ Equipped abilities:
 
 Weight: 2~
 
-@10080 = ~Golden Needle +4~
-@10081 = ~Golden Needle description placeholder
+@11080 = ~Golden Needle +4~
+@11081 = ~Golden Needle description placeholder
 
 STATISTICS:
 
@@ -862,7 +862,7 @@ Requires:
  5 Strength
 
 Weight: 2~
-@10082 = ~Defenses Pierced~
+@11082 = ~Defenses Pierced~
 
 // Creatures
 

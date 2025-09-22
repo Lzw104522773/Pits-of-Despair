@@ -19,8 +19,8 @@ COPY_EXISTING ~zbafistd.itm~ ~override~
 // String placements
 COPY ~%MOD_FOLDER%/items/darkknightbelt~ ~override~
 COPY_EXISTING ~zbdarkk0.itm~ ~override~
-    SAY NAME2 @10070
-    SAY IDENTIFIED_DESC @10071
+    SAY NAME2 @11070
+    SAY IDENTIFIED_DESC @11071
 
 
 //////// Golden Needle +4 \\\\\\\\
@@ -28,9 +28,9 @@ COPY_EXISTING ~zbdarkk0.itm~ ~override~
 // String placements
 COPY ~%MOD_FOLDER%/items/goldenneedle~ ~override~
 COPY_EXISTING ~zbgneed0.itm~ ~override~
-    SAY NAME2 @10080
-    SAY IDENTIFIED_DESC @10081
-    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@10082) END
+    SAY NAME2 @11080
+    SAY IDENTIFIED_DESC @11081
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@11082) END
 
 //////// Riptide +5 \\\\\\\\
 
